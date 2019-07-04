@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form><b>Enter a number :</b><input type="text" id="input"><input type="button" value="Show" onclick="tinh()"/></form>
+<p id="down"></p>
+<script>function tinh(){
+    let a= parseInt(document.getElementById("input").value);
+    let n=2;
+    let b="";
+   while (n<a) {
+       if (prime(n) === 1) {
+           b += +n +"  ";
+       }
+       n++;
+   }document.getElementById("down").innerHTML = b;
+    function prime(n) {
+       for (i=2;i<n;i++){
+       if (n%i==0)
+       return 0;
+       }
+    return 1
+    }}
+
+
+
+</script>
+</body>
+</html>
