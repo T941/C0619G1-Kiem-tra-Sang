@@ -6,20 +6,20 @@
 </head>
 <body>
 <form><b>Enter a number :</b><input type="text" id="input"><input type="button" value="Show" onclick="tinh()"/></form>
-<p id="down"></p>
+<p id="btnShow"></p>
 <script>function tinh(){
-    let a= parseInt(document.getElementById("input").value);
-    let n=2;
-    let b="";
-   while (n<a) {
-       if (prime(n) === 1) {
-           b += +n +"  ";
+    let = parseInt(document.getElementById("input").value);
+    let number=2;
+    let output="";
+   while (number<a) {
+       if (checkPrime(number) === 1) {
+           output += +number +"  ";
        }
-       n++;
-   }document.getElementById("down").innerHTML = b;
-    function prime(n) {
-       for (i=2;i<n;i++){
-       if (n%i==0)
+       number++;
+   }document.getElementById("btnShow").innerHTML = output;
+    function checkPrime(number) {
+       for (i=2;i<number;i++){
+       if (number%i==0)
        return 0;
        }
     return 1

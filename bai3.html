@@ -6,12 +6,23 @@
 </head>
 <body>
 <SCRIPT>
-    let namsinh=parseInt(prompt("Nhập vào năm sinh"));
-      if (namsinh<2019){
-        alert("Số tuổi là " +(2019-namsinh));}
-      else {
-          alert("Số tuổi không hợp lệ")
-      }
+    let birthYear = parseInt(prompt("Enter your birth year: "));
+
+    function calculateAge(birthYear) {
+        let currentYear = new Date().getFullYear();
+        if (birthYear > currentYear) {
+            return -1;
+        } else {
+            return currentYear - birthYear;
+        }
+    }
+
+    let result = calculateAge(birthYear);
+    if (result === -1) {
+        alert("this year is not valid");
+    } else {
+        alert(" your old is :" + result);
+    }
 </SCRIPT>
 </body>
 </html>
